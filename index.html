@@ -8,16 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Personal Portfolio of Kashish Sharma - B.Tech AI and ML Student">
+          content="Personal Portfolio of Kashish Sharma">
 
     <title>Kashish Sharma | Portfolio</title>
 
 
     <style>
 
-        /* =========================
-           GENERAL STYLING
-        ========================= */
+        /* GENERAL STYLING */
 
         * {
             margin: 0;
@@ -34,9 +32,7 @@
         }
 
 
-        /* =========================
-           NAVIGATION MENU
-        ========================= */
+        /* NAVIGATION */
 
         header {
             background-color: #222;
@@ -78,9 +74,7 @@
         }
 
 
-        /* =========================
-           HOME SECTION
-        ========================= */
+        /* HOME */
 
         #home {
             min-height: 90vh;
@@ -130,9 +124,7 @@
         }
 
 
-        /* =========================
-           COMMON SECTION
-        ========================= */
+        /* COMMON SECTION */
 
         section {
             padding: 70px 10%;
@@ -146,14 +138,11 @@
         }
 
 
-        /* =========================
-           ABOUT SECTION
-        ========================= */
+        /* ABOUT */
 
         #about p {
             max-width: 800px;
             margin: auto;
-
             font-size: 17px;
         }
 
@@ -179,18 +168,14 @@
         }
 
 
-        /* =========================
-           PROJECTS SECTION
-        ========================= */
+        /* PROJECTS */
 
         .project-container {
             display: flex;
-
             justify-content: center;
             align-items: stretch;
 
             gap: 25px;
-
             flex-wrap: wrap;
         }
 
@@ -221,55 +206,7 @@
         }
 
 
-        /* =========================
-           CONTACT SECTION
-        ========================= */
-
-        #contact > p {
-            max-width: 650px;
-
-            margin: auto;
-
-            font-size: 17px;
-        }
-
-        .contact-info {
-            margin-top: 30px;
-
-            background-color: white;
-
-            max-width: 500px;
-
-            margin-left: auto;
-            margin-right: auto;
-
-            padding: 25px;
-
-            border-radius: 10px;
-
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-info p {
-            margin: 15px;
-
-            font-size: 18px;
-        }
-
-        .contact-info a {
-            color: #00adb5;
-
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             background-color: #222;
@@ -278,19 +215,41 @@
 
             text-align: center;
 
-            padding: 20px;
+            padding: 30px 20px;
+
+            line-height: 2;
+        }
+
+        footer h3 {
+            font-size: 24px;
+            color: #00adb5;
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            color: #00adb5;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            margin-top: 15px;
+
+            border-top: 1px solid #555;
+
+            padding-top: 10px;
         }
 
 
-        /* =========================
-           RESPONSIVE DESIGN
-        ========================= */
+        /* RESPONSIVE DESIGN */
 
         @media (max-width: 650px) {
 
             nav {
                 flex-direction: column;
-
                 gap: 15px;
             }
 
@@ -316,9 +275,7 @@
 <body>
 
 
-    <!-- =========================
-         NAVIGATION MENU
-    ========================= -->
+    <!-- NAVIGATION MENU -->
 
     <header>
 
@@ -354,9 +311,7 @@
 
 
 
-    <!-- =========================
-         HOME SECTION
-    ========================= -->
+    <!-- HOME SECTION -->
 
     <section id="home">
 
@@ -381,9 +336,7 @@
 
 
 
-    <!-- =========================
-         ABOUT SECTION
-    ========================= -->
+    <!-- ABOUT SECTION -->
 
     <section id="about">
 
@@ -422,9 +375,7 @@
 
 
 
-    <!-- =========================
-         PROJECTS SECTION
-    ========================= -->
+    <!-- PROJECTS SECTION -->
 
     <section id="projects">
 
@@ -432,8 +383,6 @@
 
         <div class="project-container">
 
-
-            <!-- Sahay -->
 
             <div class="project">
 
@@ -448,8 +397,6 @@
             </div>
 
 
-            <!-- RoadMesh -->
-
             <div class="project">
 
                 <h3>RoadMesh</h3>
@@ -462,8 +409,6 @@
 
             </div>
 
-
-            <!-- Mood Box -->
 
             <div class="project">
 
@@ -478,8 +423,6 @@
             </div>
 
 
-            <!-- Nawi -->
-
             <div class="project">
 
                 <h3>Nawi</h3>
@@ -492,60 +435,35 @@
 
             </div>
 
-
         </div>
 
     </section>
 
 
 
-    <!-- =========================
-         CONTACT SECTION
-    ========================= -->
+    <!-- FOOTER / CONTACT -->
 
-    <section id="contact">
+    <footer id="contact">
 
-        <h2>Contact Me</h2>
+        <h3>Kashish Sharma</h3>
 
         <p>
-            I would love to connect with you for work, projects,
-            internships and other opportunities.
+            B.Tech AI & ML Student | Data Science Enthusiast
         </p>
 
-
-        <div class="contact-info">
-
-            <p>
-                <strong>Email:</strong>
-
-                <a href="mailto:work@gmail.com">
-                    work@gmail.com
-                </a>
-            </p>
-
-
-            <p>
-                <strong>Contact No.:</strong>
-
-                <a href="tel:********676675">
-                    ********676675
-                </a>
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
+        <p>
+            Email:
+            <a href="mailto:work@gmail.com">
+                work@gmail.com
+            </a>
+        </p>
 
         <p>
-            © 2026 Kashish Sharma | Personal Portfolio
+            Contact No.: ********676675
+        </p>
+
+        <p class="copyright">
+            © 2026 Kashish Sharma | All Rights Reserved
         </p>
 
     </footer>
