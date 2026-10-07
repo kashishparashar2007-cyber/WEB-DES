@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Personal Portfolio of Kashish Sharma - B.Tech AI and ML Student">
+
+    <title>Kashish Sharma | Personal Portfolio</title>
+
+    <style>
+
+        /* =========================
+           GENERAL STYLING
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           NAVIGATION MENU
+        ========================= */
+
+        header {
+            background-color: #222;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            width: 90%;
+            margin: auto;
+            padding: 15px 0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #00adb5;
+        }
+
+
+        /* =========================
+           HOME SECTION
+        ========================= */
+
+        #home {
+            min-height: 90vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background-color: #00adb5;
+            color: white;
+            padding: 40px;
+        }
+
+        #home h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        #home h1 span {
+            color: #ffe66d;
+        }
+
+        #home p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: #222;
+
+            padding: 12px 25px;
+
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #ffe66d;
+        }
+
+
+        /* =========================
+           COMMON SECTION
+        ========================= */
+
+        section {
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #222;
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+        ========================= */
+
+        #about p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        #about h3 {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+
+        .skills {
+            margin-top: 15px;
+        }
+
+        .skills span {
+            display: inline-block;
+
+            background-color: #00adb5;
+            color: white;
+
+            padding: 8px 15px;
+            margin: 5px;
+
+            border-radius: 20px;
+        }
+
+
+        /* =========================
+           PROJECT SECTION
+        ========================= */
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            background-color: white;
+
+            width: 250px;
+            padding: 25px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+        }
+
+        .project h3 {
+            color: #00adb5;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+
+        /* =========================
+           CONTACT SECTION
+        ========================= */
+
+        form {
+            max-width: 550px;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+
+            text-align: left;
+        }
+
+        form label {
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea {
+            padding: 12px;
+
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+            font-size: 15px;
+        }
+
+        form button {
+            margin-top: 20px;
+
+            padding: 12px;
+
+            background-color: #00adb5;
+            color: white;
+
+            border: none;
+            border-radius: 5px;
+
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #007f85;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #222;
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 650px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            #home h1 {
+                font-size: 32px;
+            }
+
+            #home p {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION MENU
+    ========================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Kashish Sharma
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HOME SECTION
+    ========================= -->
+
+    <section id="home">
+
+        <div>
+
+            <h1>
+                Hello, I'm <span>Kashish Sharma</span>
+            </h1>
+
+            <p>
+                B.Tech AI & ML Student | Data Science Enthusiast
+            </p>
+
+            <a href="#projects" class="btn">
+                View My Projects
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================= -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a B.Tech student specializing in Artificial Intelligence
+            and Machine Learning. I am interested in Artificial Intelligence,
+            Machine Learning, Data Science and Web Development. I enjoy
+            learning new technologies, developing creative ideas and
+            working on innovative projects.
+        </p>
+
+
+        <h3>My Skills</h3>
+
+        <div class="skills">
+
+            <span>HTML</span>
+
+            <span>CSS</span>
+
+            <span>Python</span>
+
+            <span>Artificial Intelligence</span>
+
+            <span>Machine Learning</span>
+
+            <span>Data Science</span>
+
+            <span>Web Development</span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS SECTION
+    ========================= -->
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="project-container">
+
+
+            <!-- Project 1 -->
+
+            <div class="project">
+
+                <h3>Sahay</h3>
+
+                <p>
+                    Sahay is a technology-based project designed to
+                    provide helpful support and solutions for users
+                    in their daily needs.
+                </p>
+
+            </div>
+
+
+            <!-- Project 2 -->
+
+            <div class="project">
+
+                <h3>RoadMesh</h3>
+
+                <p>
+                    RoadMesh is an innovative project focused on
+                    improving road-related information, connectivity
+                    and user convenience.
+                </p>
+
+            </div>
+
+
+            <!-- Project 3 -->
+
+            <div class="project">
+
+                <h3>Mood Box</h3>
+
+                <p>
+                    Mood Box is a student-focused concept designed
+                    to understand emotions, study patterns and provide
+                    academic and career support.
+                </p>
+
+            </div>
+
+
+            <!-- Project 4 -->
+
+            <div class="project">
+
+                <h3>Nawi</h3>
+
+                <p>
+                    Nawi is an innovative project focused on providing
+                    technology-based solutions and creating a better
+                    user experience.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================= -->
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <form>
+
+
+            <label for="name">
+                Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label for="message">
+                Message
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message"
+                required
+            ></textarea>
+
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Kashish Sharma | Personal Portfolio
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
