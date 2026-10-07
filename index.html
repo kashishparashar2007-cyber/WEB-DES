@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
     <meta name="description"
           content="Personal Portfolio of Kashish Sharma - B.Tech AI and ML Student">
 
-    <title>Kashish Sharma | Personal Portfolio</title>
+    <title>Kashish Sharma | Portfolio</title>
+
 
     <style>
 
@@ -91,6 +93,7 @@
 
             background-color: #00adb5;
             color: white;
+
             padding: 40px;
         }
 
@@ -110,6 +113,7 @@
 
         .btn {
             display: inline-block;
+
             background-color: white;
             color: #222;
 
@@ -117,6 +121,7 @@
 
             text-decoration: none;
             border-radius: 5px;
+
             font-weight: bold;
         }
 
@@ -148,6 +153,7 @@
         #about p {
             max-width: 800px;
             margin: auto;
+
             font-size: 17px;
         }
 
@@ -174,15 +180,17 @@
 
 
         /* =========================
-           PROJECT SECTION
+           PROJECTS SECTION
         ========================= */
 
         .project-container {
             display: flex;
+
             justify-content: center;
             align-items: stretch;
 
             gap: 25px;
+
             flex-wrap: wrap;
         }
 
@@ -190,6 +198,7 @@
             background-color: white;
 
             width: 250px;
+
             padding: 25px;
 
             border-radius: 10px;
@@ -205,7 +214,9 @@
 
         .project h3 {
             color: #00adb5;
+
             margin-bottom: 12px;
+
             font-size: 22px;
         }
 
@@ -214,49 +225,45 @@
            CONTACT SECTION
         ========================= */
 
-        form {
-            max-width: 550px;
+        #contact > p {
+            max-width: 650px;
+
             margin: auto;
 
-            display: flex;
-            flex-direction: column;
-
-            text-align: left;
+            font-size: 17px;
         }
 
-        form label {
-            margin-top: 12px;
-            margin-bottom: 5px;
-            font-weight: bold;
+        .contact-info {
+            margin-top: 30px;
+
+            background-color: white;
+
+            max-width: 500px;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        form input,
-        form textarea {
-            padding: 12px;
+        .contact-info p {
+            margin: 15px;
 
-            border: 1px solid #ccc;
-            border-radius: 5px;
-
-            font-size: 15px;
+            font-size: 18px;
         }
 
-        form button {
-            margin-top: 20px;
+        .contact-info a {
+            color: #00adb5;
 
-            padding: 12px;
-
-            background-color: #00adb5;
-            color: white;
-
-            border: none;
-            border-radius: 5px;
-
-            font-size: 16px;
-            cursor: pointer;
+            text-decoration: none;
         }
 
-        form button:hover {
-            background-color: #007f85;
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
 
@@ -266,6 +273,7 @@
 
         footer {
             background-color: #222;
+
             color: white;
 
             text-align: center;
@@ -282,6 +290,7 @@
 
             nav {
                 flex-direction: column;
+
                 gap: 15px;
             }
 
@@ -300,6 +309,7 @@
         }
 
     </style>
+
 </head>
 
 
@@ -353,7 +363,8 @@
         <div>
 
             <h1>
-                Hello, I'm <span>Kashish Sharma</span>
+                Hello, I'm
+                <span>Kashish Sharma</span>
             </h1>
 
             <p>
@@ -422,22 +433,22 @@
         <div class="project-container">
 
 
-            <!-- Project 1 -->
+            <!-- Sahay -->
 
             <div class="project">
 
                 <h3>Sahay</h3>
 
                 <p>
-                    Sahay is a technology-based project designed to
-                    provide helpful support and solutions for users
-                    in their daily needs.
+                    Sahay is a technology-based project designed
+                    to provide helpful support and solutions for
+                    users in their daily needs.
                 </p>
 
             </div>
 
 
-            <!-- Project 2 -->
+            <!-- RoadMesh -->
 
             <div class="project">
 
@@ -452,7 +463,7 @@
             </div>
 
 
-            <!-- Project 3 -->
+            <!-- Mood Box -->
 
             <div class="project">
 
@@ -460,23 +471,23 @@
 
                 <p>
                     Mood Box is a student-focused concept designed
-                    to understand emotions, study patterns and provide
-                    academic and career support.
+                    to understand emotions, study patterns and
+                    provide academic and career support.
                 </p>
 
             </div>
 
 
-            <!-- Project 4 -->
+            <!-- Nawi -->
 
             <div class="project">
 
                 <h3>Nawi</h3>
 
                 <p>
-                    Nawi is an innovative project focused on providing
-                    technology-based solutions and creating a better
-                    user experience.
+                    Nawi is an innovative project focused on
+                    providing technology-based solutions and
+                    creating a better user experience.
                 </p>
 
             </div>
@@ -496,53 +507,32 @@
 
         <h2>Contact Me</h2>
 
-        <form>
+        <p>
+            I would love to connect with you for work, projects,
+            internships and other opportunities.
+        </p>
 
 
-            <label for="name">
-                Name
-            </label>
+        <div class="contact-info">
 
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                required
-            >
+            <p>
+                <strong>Email:</strong>
+
+                <a href="mailto:work@gmail.com">
+                    work@gmail.com
+                </a>
+            </p>
 
 
-            <label for="email">
-                Email
-            </label>
+            <p>
+                <strong>Contact No.:</strong>
 
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-            >
+                <a href="tel:********676675">
+                    ********676675
+                </a>
+            </p>
 
-
-            <label for="message">
-                Message
-            </label>
-
-            <textarea
-                id="message"
-                name="message"
-                rows="5"
-                placeholder="Write your message"
-                required
-            ></textarea>
-
-
-            <button type="submit">
-                Send Message
-            </button>
-
-        </form>
+        </div>
 
     </section>
 
