@@ -1,60 +1,82 @@
 
-import React, { useState } from "react";
-
-function App() {
-    const [notes, setNotes] = useState([]);
-    const [text, setText] = useState("");
-    const [edit, setEdit] = useState(null);
-
-    function saveNote() {
-        if (text.trim() === "") return;
-
-        if (edit !== null) {
-            const updated = [...notes];
-            updated[edit] = text;
-            setNotes(updated);
-            setEdit(null);
-        } else {
-            setNotes([...notes, text]);
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes App</title>
+    <style>
+        body {
+            text-align: center;
+            background: #f2f2f2;
+            font-family: Arial;
         }
-        setText("");
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin: 30px auto;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 7px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>My Notes App</h2>
+
+    <input type="text" id="note" placeholder="Enter note">
+    <button onclick="addNote()">Add</button>
+
+    <div id="notes"></div>
+</div>
+
+<script>
+    function addNote() {
+        let input = document.getElementById("note");
+        let value = input.value;
+
+        if (value == "") return;
+
+        let div = document.createElement("p");
+        div.innerHTML = value;
+
+        let edit = document.createElement("button");
+        edit.innerHTML = "Edit";
+
+        edit.onclick = function() {
+            input.value = div.firstChild.textContent;
+            div.remove();
+        };
+
+        let del = document.createElement("button");
+        del.innerHTML = "Delete";
+
+        del.onclick = function() {
+            div.remove();
+        };
+
+        div.append(edit, del);
+        document.getElementById("notes").append(div);
+
+        input.value = "";
     }
+</script>
 
-    function deleteNote(index) {
-        setNotes(notes.filter((_, i) => i !== index));
-    }
+</body>
+</html>
 
-    function updateNote(index) {
-        setText(notes[index]);
-        setEdit(index);
-    }
 
-    return (
-        <div style={{textAlign: "center"}}>
-            <h1>My Notes App</h1>
 
-            <input
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                placeholder="Enter a note"
-            />
 
-            <button onClick={saveNote}>
-                {edit !== null ? "Update" : "Add Note"}
-            </button>
 
-            {notes.map((note, index) => (
-                <div key={index}>
-                    <p>{note}</p>
-                    <button onClick={() => updateNote(index)}>Edit</button>
-                    <button onClick={() => deleteNote(index)}>Delete</button>
-                </div>
-            ))}
-        </div>
-    );
-}
 
-export default App;
 
 
         
