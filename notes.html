@@ -1,0 +1,62 @@
+
+import React, { useState } from "react";
+
+function App() {
+    const [notes, setNotes] = useState([]);
+    const [text, setText] = useState("");
+    const [edit, setEdit] = useState(null);
+
+    function saveNote() {
+        if (text.trim() === "") return;
+
+        if (edit !== null) {
+            const updated = [...notes];
+            updated[edit] = text;
+            setNotes(updated);
+            setEdit(null);
+        } else {
+            setNotes([...notes, text]);
+        }
+        setText("");
+    }
+
+    function deleteNote(index) {
+        setNotes(notes.filter((_, i) => i !== index));
+    }
+
+    function updateNote(index) {
+        setText(notes[index]);
+        setEdit(index);
+    }
+
+    return (
+        <div style={{textAlign: "center"}}>
+            <h1>My Notes App</h1>
+
+            <input
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                placeholder="Enter a note"
+            />
+
+            <button onClick={saveNote}>
+                {edit !== null ? "Update" : "Add Note"}
+            </button>
+
+            {notes.map((note, index) => (
+                <div key={index}>
+                    <p>{note}</p>
+                    <button onClick={() => updateNote(index)}>Edit</button>
+                    <button onClick={() => deleteNote(index)}>Delete</button>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+export default App;
+
+
+        
+
+                
